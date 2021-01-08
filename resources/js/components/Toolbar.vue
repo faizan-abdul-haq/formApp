@@ -11,7 +11,7 @@
       <v-toolbar-title>RealTimeApp</v-toolbar-title>
 
       <v-spacer></v-spacer>
-    <v-toolbar-items class="hidden-sm-and-down">
+      <div>
       <v-btn text>
         Forum
       </v-btn>
@@ -23,7 +23,12 @@
       <v-btn text>
         Category
       </v-btn>
-    </v-toolbar-items>
+      <router-link to="/login">
+       <v-btn text>
+        Login
+      </v-btn>
+      </router-link>
+    </div>
     </v-toolbar>
   </v-card>
 </template>
