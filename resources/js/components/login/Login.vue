@@ -1,7 +1,6 @@
 <template>
   <v-form @submit.prevent="login">
-    <v-container>
-    
+    <v-container>   
           <v-text-field
             v-model="form.email"
             label="Email"
@@ -10,7 +9,6 @@
           >
           </v-text-field>
       
-
           <v-text-field
             v-model="form.password"
             label="Password"
@@ -32,9 +30,6 @@
 </template>
 
 <script>
-// window.axios = require('axios');
-// Vue.prototype.$http = window.axios
-import axios from 'axios';
 
 export default {
     data(){

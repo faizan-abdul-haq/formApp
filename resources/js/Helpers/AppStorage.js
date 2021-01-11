@@ -1,4 +1,3 @@
-import { use } from "vue/types/umd";
 
 class AppStorage{
 
@@ -29,4 +28,4 @@ class AppStorage{
     }
 }
 
-export default AppStorage = new AppStorage()
+export default AppStorage = new AppStorage();

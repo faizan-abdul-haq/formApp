@@ -10,12 +10,13 @@
 import AppFooter from './AppFooter'
 import Login from './login/Login'
 import toolbar from './Toolbar'
+
 export default {
   components: { toolbar,AppFooter,Login }
-
 }
 
-    Login</script>
+  Login
+</script>
 
 <style>
 
