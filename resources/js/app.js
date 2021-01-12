@@ -12,7 +12,9 @@ Vue.use(Vuetify)
 
 import User from './Helpers/User'
 window.User = User
-console.log(User.hasToken())
+
+window.EventBus = new Vue();
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -28,6 +30,8 @@ console.log(User.hasToken())
 import AppHome from './components/AppHome.vue';
 
 Vue.component('app-home', AppHome);
+
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

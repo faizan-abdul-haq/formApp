@@ -22,7 +22,7 @@ class AuthController extends Controller
 
         $accessToken = $user->createToken('authToken')->accessToken;
         
-        // $this->login($request);
+        $this->login($request);
         
         return response([ 'user' => $user, 'access_token' => $accessToken]);
     }

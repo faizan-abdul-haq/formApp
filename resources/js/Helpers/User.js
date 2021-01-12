@@ -16,16 +16,20 @@ class User{
     responseAfterLogin(res){
 
         const access_token = res.data.access_token
-        //const payload = access_token.split('.')[1]
+        
+     
         const user_name = res.data.user.name
+        // const payload = access_token.split('.')[1]
+        // console.log(atob(payload))
+
         AppStorage.store(user_name,access_token)
-        this.hasToken()
+        window.location = '/forum'
 
     }
 
     hasToken(){
         const storedToken = AppStorage.getToken()
-        console.log(storedToken)
+
         if (storedToken){
             return true
         }
@@ -35,16 +39,17 @@ class User{
     }
 
     loggedIn(){
-        this.hasToken()
+        return this.hasToken()
     }
 
     logout(){
         AppStorage.clear()
+        window.location = '/forum'
     }
 
     name(){
         if(this.loggedIn()){
-            AppStorage.getUser()
+            return AppStorage.getUser()
         }
     }
 
